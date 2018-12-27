@@ -132,6 +132,7 @@ public class Main {
 
     private static int[] insertSort(int[] array) {
         int in, out;
+        long t = System.currentTimeMillis();
         for (out = 1; out < array.length; out++) {
             int temp = array[out];
             in = out;
@@ -141,6 +142,8 @@ public class Main {
             }
             array[in] = temp;
         }
+        t = System.currentTimeMillis() - t;
+        System.out.println("time = " + t);
         return array;
     }
 
